@@ -1,6 +1,7 @@
 # vision-boundary
 
 > A Vue.js project
+> 暑期视界项目
 
 ## Build Setup
 
