@@ -12,7 +12,7 @@ export function fetch (options) {
     })
     instance(options)
       .then(response => { // then请求成功之后进行什么操作
-        resolve(response) // 把请求到的数据发到引用请求的地方
+        resolve(response.data) // 把请求到的数据发到引用请求的地方
       })
       .catch(error => {
         console.log('请求异常信息：' + error)

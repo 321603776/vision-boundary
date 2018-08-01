@@ -12,7 +12,29 @@ export function lookOption (issuer, userId) { // lookOption是你要调用接口
     }
   })
 }
-
+export function register (username, password, email) {
+  return fetch({
+    url: api.Hallowmas + 'register/registerfrom',
+    method: 'post',
+    params: {
+      'username': username,
+      'password': password,
+      'email': email
+    }
+  })
+}
+export function isEmail (email) {
+  return fetch({
+    url: api.Hallowmas + 'register/email?email=' + email,
+    method: 'get'
+  })
+}
+export function isname (username) {
+  return fetch({
+    url: api.Hallowmas + 'register/username?username=' + username,
+    method: 'get'
+  })
+}
 // 有新接口的时候像上面那样再来一次
 // //修改昵称接口
 // export function userID(name){
