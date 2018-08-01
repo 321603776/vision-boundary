@@ -1,7 +1,7 @@
 -<template>
   <div>
     <head-title>
-      <span slot="centre">注册</span>
+      <span slot="conter">注册</span>
     </head-title>
     <div class="registerFrom">
       <el-input v-model="registerFrom.username" placeholder="用户名" clearable></el-input>

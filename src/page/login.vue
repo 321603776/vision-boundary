@@ -1,7 +1,7 @@
 -<template>
   <div>
     <head-title>
-      <span slot="centre">登陆</span>
+      <span slot="conter">登陆</span>
       <span slot="right">忘记密码</span>
     </head-title>
     <div class="loginFrom">

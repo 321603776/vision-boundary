@@ -2,11 +2,11 @@
   <div class="title">
     <el-row>
       <el-col :span="6">
-        <i class="iconfont icon-back"></i>
+        <i class="iconfont icon-back" @click="$router.go(-1)"></i>
       </el-col>
       <el-col :span="12">
         <div class="centre">
-          <slot name="centre"></slot>
+          <slot name="conter"></slot>
         </div>
       </el-col>
       <el-col :span="6">
@@ -22,7 +22,7 @@
 export default {
   data () {
     return {
-      key: 'value'
+      backColor: ''
     }
   }
 }
@@ -30,12 +30,11 @@ export default {
 
 <style scoped>
 .title{
+  background-color: #999999;
   width: 16rem;
   height: 2rem;
-  background-color: #999999;
   color: #fff;
   font-size: .8rem;
-
 }
 .iconfont{
   font-size: 1rem;

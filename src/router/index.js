@@ -6,6 +6,9 @@ import person from '@/page/person'
 import register from '@/page/register'
 import shoot from '@/page/shoot'
 import upload from '@/page/upload'
+import personmessge from '@/page/personmessge'
+import fensi from '@/page/fensi'
+import guanzhu from '@/page/guanzhu'
 
 Vue.use(Router)
 
@@ -44,6 +47,21 @@ export default new Router({
       path: '/upload',
       name: 'upload',
       component: upload
+    },
+    {
+      path: '/personmessge',
+      name: 'personmessge',
+      component: personmessge
+    },
+    {
+      path: '/fensi',
+      name: 'fensi',
+      component: fensi
+    },
+    {
+      path: '/guanzhu',
+      name: 'guanzhu',
+      component: guanzhu
     }
   ]
 })
