@@ -56,6 +56,48 @@ export function getPersonMessge () {
     method: 'get'
   })
 }
+// 获取视频评论接口
+export function getComment (toVideoId) {
+  return fetch({
+    url: api.Hallowmas + 'comment/' + toVideoId,
+    method: 'get'
+  })
+}
+// 用户关注列表接口
+export function getFollowList () {
+  return fetch({
+    url: api.Hallowmas + 'user/followList',
+    method: 'get'
+  })
+}
+// 用户粉丝列表接口
+export function getFansList () {
+  return fetch({
+    url: api.Hallowmas + 'user/fansList',
+    method: 'get'
+  })
+}
+// 个人主页+我的作品接口
+export function getUserhome () {
+  return fetch({
+    url: api.Hallowmas + 'user/userhome',
+    method: 'get'
+  })
+}
+// 用户收藏列表接口
+export function getCollections () {
+  return fetch({
+    url: api.Hallowmas + 'user/collections',
+    method: 'get'
+  })
+}
+// 他人主页接口
+export function getOthers (userId) {
+  return fetch({
+    url: api.Hallowmas + 'user/' + userId,
+    method: 'get'
+  })
+}
 // 有新接口的时候像上面那样再来一次
 // //修改昵称接口
 // export function userID(name){
