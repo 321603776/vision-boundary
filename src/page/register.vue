@@ -40,6 +40,7 @@ export default {
   },
   methods: {
     isEmail () {
+      console.log(window.localStorage.getItem('tokenDate'))
       this.emailIcon = 'el-icon-loading'
       isEmail(this.registerFrom.email).then(res => {
         if (res.msg === '邮箱不存在') {
@@ -62,7 +63,7 @@ export default {
     ifname () {
       this.nameIcon = 'el-icon-loading'
       isname(this.registerFrom.username).then(res => {
-        if (res.msg === 'success') {
+        if (res.msg === '用户名不存在') {
           this.nameIcon = 'el-icon-circle-check'
         } else {
           this.nameIcon = 'el-icon-circle-close'

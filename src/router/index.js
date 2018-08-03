@@ -9,6 +9,7 @@ import upload from '@/page/upload'
 import personmessge from '@/page/personmessge'
 import fensi from '@/page/fensi'
 import guanzhu from '@/page/guanzhu'
+import forgetPassword from '@/page/forgetPassword'
 
 Vue.use(Router)
 
@@ -62,6 +63,11 @@ export default new Router({
       path: '/guanzhu',
       name: 'guanzhu',
       component: guanzhu
+    },
+    {
+      path: '/forgetPassword',
+      name: 'forgetPassword',
+      component: forgetPassword
     }
   ]
 })

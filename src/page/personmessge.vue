@@ -10,6 +10,7 @@
 
 <script>
 import title from '@/components/common/title/title.vue'
+import {getPersonMessge} from './../axios/api.js'
 export default {
   components: {
     'headTitle': title
@@ -18,6 +19,13 @@ export default {
     return {
       data: 'vaterUrl'
     }
+  },
+  mounted: () => {
+    getPersonMessge().then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
   }
 }
 </script>
