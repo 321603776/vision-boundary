@@ -69,6 +69,17 @@ export default {
         })
       })
     }
+  },
+  beforeMount () {
+    let redirect = this.$route.query.redirect
+    if (redirect !== undefined) {
+      Message({
+        message: '请先登陆o(*￣▽￣*)o',
+        type: 'error',
+        center: true,
+        duration: 1500
+      })
+    }
   }
 }
 </script>
