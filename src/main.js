@@ -4,12 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'element-ui/lib/theme-chalk/index.css'
-import {Button, Row, Col, Input} from 'element-ui'
+import {Button, Row, Col, Input, Loading} from 'element-ui'
 import {tap, swipeleft, swiperight, press} from './hammer/touchvue'
 
 Vue.config.productionTip = false
 Vue.use(Button).use(Row).use(Col).use(Input)
-Vue.use(tap).use(swipeleft).use(swiperight).use(press)
+Vue.use(tap).use(swipeleft).use(swiperight).use(press).use(Loading.directive)
 
 /* eslint-disable no-new */
 new Vue({

@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .title{
-  background-color: #999999;
+  background-color: #444444;
   width: 16rem;
   height: 2rem;
   color: #fff;

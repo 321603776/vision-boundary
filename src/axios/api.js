@@ -59,7 +59,7 @@ export function getPersonMessge () {
 // 获取视频评论接口
 export function getComment (toVideoId) {
   return fetch({
-    url: api.Hallowmas + 'comment/' + toVideoId,
+    url: api.Hallowmas + 'comments/' + toVideoId,
     method: 'get'
   })
 }
@@ -98,26 +98,34 @@ export function getOthers (userId) {
     method: 'get'
   })
 }
-// 有新接口的时候像上面那样再来一次
-// //修改昵称接口
-// export function userID(name){
-//   return fetch({
-//     url:api.myself_name,
-//     method:"put",
-//     data:{
-//       nickname:name
-//     }
-//   })
-// }
-//
-//
-// //取消转发赞踩接口
-// export function cancelForward(articleId,type){
-//   return fetch({
-//     url:api.detail_article+articleId+"/forwarded_impress",
-//     method:"delete",
-//     params:{
-//       type:type
-//     }
-//   })
-// }
+/**
+ * 获取视频分类接口
+ */
+export function videoType () {
+  return fetch({
+    url: api.Hallowmas + 'video/allVideoType',
+    method: 'get'
+  })
+}
+/**
+ * 获取视频分类的视频
+ * @param {当前页数} Number
+ * @param {一页显示条数}} Number
+ * @param {视频类型} String
+ */
+export function getVideos (pageIndex, pageSize, videoType) {
+  return fetch({
+    url: api.Hallowmas + `videoType/${pageIndex}&&${pageSize}?videoType=${videoType}`,
+    method: 'get'
+  })
+}
+/**
+ * 顶一下视频
+ * @param {Number} videoId
+ */
+export function videoTop (videoId) {
+  return fetch({
+    url: api.Hallowmas + `video/top/${videoId}`,
+    method: 'put'
+  })
+}

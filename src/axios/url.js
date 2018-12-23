@@ -1,5 +1,12 @@
+const urlDev = '/api'
+const urlProd = 'http://www.haogedada.top/api/'
+var url = ''
+process.env.NODE_ENV === 'development' ? url = urlDev : url = urlProd
+const excelUrl = url
+// console.log(excelUrl)
+
 export default {
-  Hallowmas: '/api'
+  Hallowmas: excelUrl
   // 接口代理配置
 }
 

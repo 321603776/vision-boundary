@@ -7,10 +7,6 @@
     <div class="loginFrom">
       <el-input v-model="from.username" placeholder="用户名" clearable></el-input>
       <el-input v-model="from.password" placeholder="密码" clearable type="password"></el-input>
-      <el-input v-model="from.verification" placeholder="验证码" clearable class="yanzm"></el-input>
-      <div class="yanzmImg">
-        <img :src="src"/>
-      </div>
         <el-button type="success" @click="login">登陆</el-button><el-button @click="$router.push('/register')">注册</el-button>
     </div>
   </div>

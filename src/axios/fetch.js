@@ -1,5 +1,5 @@
 import axios from 'axios' // 引入axios
-
+// const CryptoJs = require('crypto-js')
 export function fetch (options) {
   return new Promise((resolve, reject) => {
     getToken()
@@ -34,12 +34,11 @@ export function fetch (options) {
 }
 // 当token30分钟失效时重新获取token值
 function getToken () {
-  if (window.localStorage.getItem('tokenDate') != null) {
-    if (new Date().getTime() - window.localStorage.getItem('tokenDate') >= 30 * 60 * 1000 &&
-      window.localStorage.getTime('token') != null) {
+  if (window.localStorage.getItem('token') != null) {
+    if (new Date().getTime() - window.localStorage.getItem('tokenDate') >= 30 * 60 * 1000) {
       let username = window.localStorage.getItem('username')
       let password = window.localStorage.getItem('password')
-      axios.post('http://www.haogedada.top/api/login?username=' + username + '&password=' + password).then(res => {
+      axios.post('/apilogin?username=' + username + '&password=' + password).then(res => {
         window.localStorage.setItem('token', res.data.data)
         window.localStorage.setItem('tokenDate', new Date().getTime())
       }).catch(err => {

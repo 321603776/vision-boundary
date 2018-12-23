@@ -10,6 +10,7 @@ import personmessge from '@/page/personmessge'
 import fensi from '@/page/fensi'
 import guanzhu from '@/page/guanzhu'
 import forgetPassword from '@/page/forgetPassword'
+import others from '@/page/others'
 
 Vue.use(Router)
 
@@ -100,6 +101,14 @@ let router = new Router({
       component: forgetPassword,
       meta: {
         requireAuth: false
+      }
+    },
+    {
+      path: '/others',
+      name: 'others',
+      component: others,
+      meta: {
+        requireAuth: true
       }
     }
   ]

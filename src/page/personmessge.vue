@@ -10,7 +10,7 @@
         </el-col>
         <el-col :span="12">
           <img v-if="obj.data.headimgUrl === ''" src="/static/image/headImg.jpg" alt="">
-          <img v-else :src="obj.data.headimgUrl" alt="">
+          <img v-else :src="obj.data.headimgUrl" alt="" onerror="this.src='/static/image/headImg.jpg'">
         </el-col>
       </el-row>
             <el-row>
@@ -83,7 +83,6 @@ export default {
       .then(res => {
         this.obj = res
         this.isloading = true
-        console.log(res.data.bardianSign)
       })
       .catch(err => {
         console.log(err)
@@ -102,6 +101,7 @@ export default {
 .el-row:after{
   content: '';
   display: block;
+  transform: scale(1,0.5);
   border-bottom: 1px solid #999;
 }
 .el-row span{
@@ -119,6 +119,6 @@ export default {
 .el-button{
   display: block;
   width: 12rem;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 </style>
